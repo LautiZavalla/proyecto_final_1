@@ -1,0 +1,283 @@
+
+/* inicio universal settings */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+/* inicio fuentes */
+@font-face {
+    font-family: 'MBold';
+    src: url(../fonts/Montserrat-ExtraBold.ttf);
+}
+/* font-family: 'Montserrat', sans-serif; */
+
+/* fin fuentes */
+
+/* fin universal settings */
+
+
+
+
+/* inicio body */
+
+body{
+    min-height: 100%;
+}
+
+.grid_container{
+    display: grid;
+    /* gap: 5px;  usaba gap para testear la ubicación de cada conteiner */
+    grid-template: 
+    "header" 50px
+    "nav" 60px
+    "section_img" auto
+    "footer" 100px /
+    auto;
+    background-color: #042743;
+}
+
+
+
+
+/* inicio header */
+
+.header{
+    display: flex;
+    justify-content: center;
+    grid-area: header;
+    background-color: #042743;
+    align-items: center;
+}
+
+.header img{
+    width: 50px;
+}
+
+/* fin header */
+
+
+
+
+/* inicio nav */
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-area: nav;
+    background-color: #042743;
+}
+
+.navbar ul{
+    list-style-type: none;
+}
+
+.navbar ul li{
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 10px;
+    display: block;
+    text-transform: uppercase;
+    color: #DB0029;
+    font-family: 'MBold';
+    font-weight: bolder;
+}
+/* fin nav */
+
+
+
+
+/* inicio section_html */
+
+.section{
+    display: flex;
+    justify-content: center;
+    grid-area: section_img;
+    background-color: #808587;
+}
+
+.section img{
+    height: 300px;
+    width: 300px;
+}
+
+/* fin section_index */
+
+
+
+
+/* inicio section_nosotros */
+
+.section_nosotros{
+    background-color: #808587;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.section_nosotros div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo_completo img{
+    width: 230px;
+}
+
+.texto_main h1{
+    font-family: 'MBold';
+    font-style: bolder;
+    font-size: 20px;
+}
+
+.texto_main p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.section_nosotros div ul{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* fin section_nosotros */
+
+
+
+
+/* inicio footer */
+
+.footer{
+    /* display: flex;
+    justify-content: space-around;
+    justify-items: center; */
+    grid-area: footer;
+    background-color: #042743;
+}
+
+.socials_menu{
+    background-color: #042743;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.socials_menu div img{
+    width: 25px;
+}
+
+
+
+/* responsive */
+
+/* inicio modo tablet */
+
+@media (min-width:600px) {
+    .grid_container{
+    display: grid;
+    grid-template:  
+    "header"50px
+    "nav" 60px
+    "section_img" auto
+    "footer"100px /
+    auto;
+    background-color: #042743;
+}
+    .navbar{
+        grid-area: nav;
+    }
+
+    .navbar ul li a{
+        font-size: 15px;
+    }
+}
+
+/* inicio modo desktop */
+
+@media (min-width:900px){
+    .grid_container{
+        display: grid;
+        grid-template:  
+        "header" 50px
+        "nav" 70px
+        "section_img" auto
+        "footer" 100px /
+        auto;
+        background-color: #042743;
+    }
+
+    .header{
+        margin-top: 10px;
+    }
+
+    .header img{
+        width: 60px;
+    }
+
+    .section img{
+        width: 300px;
+    }
+
+    /* inicio section_nosotros */
+
+    .section_nosotros{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .section_nosotros div{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo_completo img{
+        margin-left: 200px;
+        width: 500px;
+    }
+
+    .texto_main{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-right: 200px;
+    }
+
+    .texto_main h1{
+        margin-left: 15%;
+        font-size: 25px;
+    }
+
+    .texto_main p{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        margin-top: 15px;
+        margin-left: 20px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+    }
+
+    .texto_main ul{
+        margin-left: 15%;
+        
+    }
+    
+
+    /* fin section_nosotros */
+
+}
