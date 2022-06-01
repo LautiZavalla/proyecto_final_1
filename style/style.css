@@ -58,12 +58,14 @@ body{
 
 .header img{
     width: 50px;
+    transition: width 1ms;
+}
+
+.header img:hover{
+    width: 70px;
 }
 
 /* fin header */
-
-
-
 
 /* inicio nav */
 
@@ -93,6 +95,11 @@ body{
     color: #DB0029;
     font-family: 'MBold';
     font-weight: bolder;
+    transition: 1ms;
+}
+
+.navbar ul li a:hover{
+    background-color: #808587;
 }
 /* fin nav */
 
@@ -111,6 +118,12 @@ body{
 .section img{
     height: 300px;
     width: 300px;
+    transition: width 1s, height 1s;
+}
+
+.section img:hover{
+    width: 320px;
+    height: 320px;
 }
 
 /* fin section_index */
@@ -136,6 +149,11 @@ body{
 
 .logo_completo img{
     width: 230px;
+    transition: width 1s;
+}
+
+.logo_completo img:hover{
+    width: 600px;
 }
 
 .texto_main h1{
